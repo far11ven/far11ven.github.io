@@ -5,6 +5,7 @@ import Helmet from "react-helmet";
 import { DiscussionEmbed } from "disqus-react";
 import { Layout } from "../components/common";
 import { MetaData } from "../components/common/meta";
+import { readingTime as readingTimeHelper } from "@tryghost/helpers";
 
 import Favicon from "../../static/favicon.ico";
 
@@ -16,6 +17,7 @@ import Favicon from "../../static/favicon.ico";
  */
 const Post = ({ title, data, location }) => {
     const post = data.ghostPost;
+    const readingTime = readingTimeHelper(post);
     const disqusConfig = {
         shortname: process.env.GATSBY_DISQUS_NAME || "www-kushalbhalaik-xyz",
         config: { identifier: post.slug, title },
@@ -48,6 +50,11 @@ const Post = ({ title, data, location }) => {
                             <h1 className="content-title">{post.title}</h1>
                             <p className="text-muted">
                                 {post.created_at_pretty}
+                            </p>
+                            <p className="lead">
+                                <span className="badge badge-secondary">
+                                    {readingTime}
+                                </span>
                             </p>
                             {/* Google in Articale ada */}
                             <ins
