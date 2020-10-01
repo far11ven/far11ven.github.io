@@ -1,13 +1,14 @@
 const path = require(`path`)
 const { postsPerPage } = require(`./src/utils/siteConfig`)
 const { paginate } = require(`gatsby-awesome-pagination`)
+const { readingTime }  = require(`@tryghost/helpers`)
 
 /**
  * Here is the place where Gatsby creates the URLs for all the
  * posts, tags, pages and authors that we fetched from the Ghost site.
  */
 exports.createPages = async ({ graphql, actions }) => {
-    const { createPage } = actions
+    const { createPage } = actions;
 
     const result = await graphql(`
         {
@@ -16,6 +17,18 @@ exports.createPages = async ({ graphql, actions }) => {
                     node {
                         slug
                     }
+                    next {
+                        slug
+                        title
+                        feature_image
+                        html
+                    }
+                    previous{
+                        slug
+                        title
+                        feature_image
+                        html
+                      }
                 }
             }
             allGhostTag(sort: { order: ASC, fields: name }) {
@@ -24,7 +37,7 @@ exports.createPages = async ({ graphql, actions }) => {
                         slug
                         url
                         postCount
-                    }
+                    }                      
                 }
             }
             allGhostAuthor(sort: { order: ASC, fields: name }) {
@@ -177,21 +190,45 @@ exports.createPages = async ({ graphql, actions }) => {
     })
 
     // Create post pages
-    posts.forEach(({ node }, index) => {
+    posts.forEach((curr, index) => {
         // This part here defines, that our posts will use
         // a `/:slug/` permalink.
-        node.url = `/${node.slug}/`
+        curr.node.url = `/${curr.node.slug}/`
 
-        const prev = index === 0 ? false : posts[index - 1].node
-        const next = index === posts.length - 1 ? false : posts[index + 1].node
+        let prev;
+        let next;
+
+        if(curr.previous){
+            prev = curr.previous;
+            const prevArticleReadingTime = readingTime(prev);
+            prev["readingTime"] = prevArticleReadingTime;
+        }
+        else {
+            prev = false;
+        }
+
+        if(curr.next){
+            next = curr.next;
+            const nextArticleReadingTime = readingTime(next);
+            next["readingTime"] = nextArticleReadingTime
+        }
+        else {
+            next = false;
+        }
+
+        
+      
+
+        // const prev = index === 0 ? false : posts[index - 1].node
+        // const next = index === posts.length - 1 ? false : posts[index + 1].node
 
         createPage({
-            path: node.url,
+            path: curr.node.url,
             component: postTemplate,
             context: {
                 // Data passed to context is available
                 // in page queries as GraphQL variables.
-                slug: node.slug,
+                slug: curr.node.slug,
                 prev,
                 next
             },
