@@ -34,6 +34,10 @@ const Post = ({ title, data, location }) => {
                     href={Favicon}
                 ></link>
                 <style type="text/css">{`${post.codeinjection_styles}`}</style>
+
+                {/* Prism.js - Code Syntax Highlighter*/}
+                <liink rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.4.1/themes/prism.min.css" />
+                <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.4.1/prism.min.js"></script>
             </Helmet>
             <Layout>
                 <div className="container">
