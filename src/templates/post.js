@@ -6,6 +6,7 @@ import { DiscussionEmbed } from "disqus-react";
 import { Layout } from "../components/common";
 import { MetaData } from "../components/common/meta";
 import { readingTime as readingTimeHelper } from "@tryghost/helpers";
+import PostPreview from "../components/common/PostPreview"
 
 import Favicon from "../../static/favicon.ico";
 
@@ -15,9 +16,11 @@ import Favicon from "../../static/favicon.ico";
  * This file renders a single post and loads all the content.
  *
  */
-const Post = ({ title, data, location }) => {
+
+const Post = ({ title, data, location, pageContext }) => {
     const post = data.ghostPost;
     const readingTime = readingTimeHelper(post);
+    const { prev, next } = pageContext;
     const disqusConfig = {
         shortname: process.env.GATSBY_DISQUS_NAME || "www-kushalbhalaik-xyz",
         config: { identifier: post.slug, title },
@@ -34,10 +37,7 @@ const Post = ({ title, data, location }) => {
                     href={Favicon}
                 ></link>
                 <style type="text/css">{`${post.codeinjection_styles}`}</style>
-
-                {/* Prism.js - Code Syntax Highlighter*/}
-                <liink rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.4.1/themes/prism.min.css" />
-                <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.4.1/prism.min.js"></script>
+           
             </Helmet>
             <Layout>
                 <div className="container">
@@ -82,6 +82,9 @@ const Post = ({ title, data, location }) => {
                             />
                         </section>
                     </article>
+                    <div>
+                    <PostPreview prev={prev} next={next} />
+                   </div>
                     {/* //for disqus_thread */}
                     <div id="disqus_thread">
                         <DiscussionEmbed {...disqusConfig} />
@@ -101,6 +104,7 @@ Post.propTypes = {
         }).isRequired,
     }).isRequired,
     location: PropTypes.object.isRequired,
+    pageContext:PropTypes.object.isRequired
 };
 
 export default Post;

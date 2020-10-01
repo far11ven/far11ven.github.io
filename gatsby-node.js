@@ -177,10 +177,13 @@ exports.createPages = async ({ graphql, actions }) => {
     })
 
     // Create post pages
-    posts.forEach(({ node }) => {
+    posts.forEach(({ node }, index) => {
         // This part here defines, that our posts will use
         // a `/:slug/` permalink.
         node.url = `/${node.slug}/`
+
+        const prev = index === 0 ? false : posts[index - 1].node
+        const next = index === posts.length - 1 ? false : posts[index + 1].node
 
         createPage({
             path: node.url,
@@ -189,6 +192,8 @@ exports.createPages = async ({ graphql, actions }) => {
                 // Data passed to context is available
                 // in page queries as GraphQL variables.
                 slug: node.slug,
+                prev,
+                next
             },
         })
     })
