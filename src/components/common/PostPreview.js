@@ -16,7 +16,7 @@ const PostPreview = ({prev, next,props}) => {
         <div className="col-md-6 col-xs-6">
         {prev && <Link to={prev.slug} rel="prev">
         <span aria-hidden="true">
-        <BackArrow  style={{transform: [{ rotate: "180deg" }]}}></BackArrow>
+        <BackArrow></BackArrow>
         {" "} Previous Post
         </span>
         
