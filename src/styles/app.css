@@ -1216,3 +1216,21 @@ a.back-to-home:hover {
     transform: rotate(-135deg);
     opacity: 0.9;
 }
+
+
+/** Post-preview  Next/Prev**/
+
+.post-preview-title{
+    margin: 0 !important;
+}
+
+.post-preview-navigation a{
+    color: #111212;
+    transition: opacity 150ms linear, color 150ms linear, background 150ms linear;
+    text-decoration: none;
+}
+
+.post-preview-navigation a:hover{
+    color: #007bff;
+    fill: #007bff;
+}

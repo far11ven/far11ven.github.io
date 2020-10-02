@@ -9,7 +9,6 @@ const PostCard = ({ post }) => {
 
     return (
         <div>
-            {/* {<div>{console.log(post)}</div>} */}
             <strong className="d-inline-block mb-2 text-primary">
                 {post.tags && (
                     <div className="post-card-tags">

@@ -1,6 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
-import { graphql } from "gatsby";
+import { Link, graphql } from "gatsby";
 import Helmet from "react-helmet";
 import { DiscussionEmbed } from "disqus-react";
 import { Layout } from "../components/common";
@@ -17,7 +17,7 @@ import Favicon from "../../static/favicon.ico";
  *
  */
 
-const Post = ({ title, data, location, pageContext }) => {
+const Post = ({title, tags, data, location, pageContext }) => {
     const post = data.ghostPost;
     const readingTime = readingTimeHelper(post);
     const { prev, next } = pageContext;
@@ -50,6 +50,20 @@ const Post = ({ title, data, location, pageContext }) => {
                                 />
                             </figure>
                         ) : null}
+                        <strong className="d-inline-block mb-2 text-primary">
+                          <div className="post-card-tags">
+                            {post.tags.map((item, i) => (
+                              <span key={i}>
+                                <a href={"/tag/" + item.name.toLowerCase()}>
+                                    {"#"}
+                                    {item.name.toLowerCase()}
+                                    {"  "}
+                                </a>
+                              </span>
+                            ))}
+                        </div>
+                       </strong>
+                       <br></br>
                         <section className="post-full-content">
                             <h1 className="content-title">{post.title}</h1>
                             <p className="text-muted">
@@ -83,8 +97,8 @@ const Post = ({ title, data, location, pageContext }) => {
                         </section>
                     </article>
                     <div>
-                    <PostPreview prev={prev} next={next} />
-                   </div>
+                         <PostPreview prev={prev} next={next} />
+                    </div>
                     {/* //for disqus_thread */}
                     <div id="disqus_thread">
                         <DiscussionEmbed {...disqusConfig} />
@@ -101,6 +115,7 @@ Post.propTypes = {
             title: PropTypes.string.isRequired,
             html: PropTypes.string.isRequired,
             feature_image: PropTypes.string,
+            tags:PropTypes.arrayOf(PropTypes.object)
         }).isRequired,
     }).isRequired,
     location: PropTypes.object.isRequired,

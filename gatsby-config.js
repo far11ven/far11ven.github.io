@@ -68,6 +68,17 @@ module.exports = {
                     : ghostConfig.production
         },
         /**
+         *  SVG loader
+         */
+        {
+            resolve: 'gatsby-plugin-react-svg',
+            options: {
+              rule: {
+                include: /\.inline\.svg$/
+              }
+            }
+        },
+        /**
          *  Utility Plugins
          */
         {
