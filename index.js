@@ -122,7 +122,7 @@ function changeTheme(userPref) {
       }
     } else {
       $(".dark-th").css("color", "rgba(0,0,0,.5)");
-      $(".dark-wh").css("color", "#000000)");
+      $(".dark-wh").css("color", "#000000");
       $("#theme-toggle").prop("checked", false);
       if (deviceWidth < 575) {
         $("body").css("background-color", "#ecf0f3");
