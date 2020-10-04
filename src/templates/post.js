@@ -74,7 +74,7 @@ const Post = ({title, tags, data, location, pageContext }) => {
                                     {readingTime}
                                 </span>
                             </p>
-                            {/* Google in Articale ada */}
+                            {/* Google in Articale ads */}
                             <ins
                                 className="adsbygoogle"
                                 // style={{

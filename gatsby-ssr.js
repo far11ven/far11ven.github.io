@@ -27,7 +27,5 @@ export function onRenderBody({
     setPreBodyComponents([]);
 
     setBodyAttributes([
-<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5e6a0f6a419ca078"></script>
-
     ]);
 }
