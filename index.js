@@ -109,6 +109,7 @@ function changeTheme(userPref) {
   $(document).ready(function () {
     if (userPref === "true") {
       $(".dark-th").css("color", "#ffffff");
+      $(".dark-wh").css("color", "#ffffff");
       $("#theme-toggle").prop("checked", true);
       if (deviceWidth < 575) {
         $("body").css("background-color", "#12253c");
@@ -121,6 +122,7 @@ function changeTheme(userPref) {
       }
     } else {
       $(".dark-th").css("color", "rgba(0,0,0,.5)");
+      $(".dark-wh").css("color", "#000000)");
       $("#theme-toggle").prop("checked", false);
       if (deviceWidth < 575) {
         $("body").css("background-color", "#ecf0f3");
