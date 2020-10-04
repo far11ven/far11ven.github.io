@@ -90,9 +90,14 @@ p#success-message {
   margin-top: 1rem;
 }
 
+.navbar-title{
+     font-family: "Caveat"; 
+     font-style: normal;
+     font-size: 2rem;
+}
+
 a.navbar-brand {
   color: #fff;
-  text-transform: uppercase;
   text-decoration: none;
   letter-spacing: 0.15em;
   display: inline-block;
@@ -136,6 +141,9 @@ a.navbar-brand:hover:after {
 }
 
 .header {
+  font-family: "Caveat"; 
+  font-style: normal;
+  font-size: 1.5rem;
   color: #000;
   margin-right: 0.2rem;
   text-decoration: none;
