@@ -34,12 +34,6 @@ const DefaultLayout = ({ data, children, bodyClass, isHome }) => {
                  {/* adding google fonts */}
                 <link href="https://fonts.googleapis.com/css?family=Caveat" rel="stylesheet"/>
                 <style type="text/css">{`${site.codeinjection_styles}`}</style>
-                <script
-                    data-ad-client="ca-pub-1533259080190708"
-                    async
-                    src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"
-                ></script>
-                <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5e6a0f6a419ca078"></script>
                 <body className={bodyClass} />
             </Helmet>
 
