@@ -31,12 +31,8 @@ const DefaultLayout = ({ data, children, bodyClass, isHome }) => {
                     type="image/x-icon"
                     href={Favicon}
                 ></link>
-                {/* Google ad code */}
-                <script
-                    data-ad-client="ca-pub-1533259080190708"
-                    async
-                    src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"
-                ></script>
+                 {/* adding google fonts */}
+                <link href="https://fonts.googleapis.com/css?family=Caveat" rel="stylesheet"/>
                 <style type="text/css">{`${site.codeinjection_styles}`}</style>
                 <body className={bodyClass} />
             </Helmet>
@@ -46,7 +42,7 @@ const DefaultLayout = ({ data, children, bodyClass, isHome }) => {
                     {/* The main header section on top of the screen */}
                     <nav className="navbar navbar-expand-lg navbar-light fixed-top">
                         <a className="navbar-brand" href="/">
-                            kushalbhalaik.xyz
+                            <span className="navbar-title">kushalbhalaik.xyz</span>
                         </a>
                         <button
                             className="navbar-toggler collapsed position-relative"
