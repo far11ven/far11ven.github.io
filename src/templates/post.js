@@ -50,7 +50,9 @@ const Post = ({title, tags, data, location, pageContext }) => {
 <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.21.0/components/prism-handlebars.min.js" integrity="sha512-jQqwOKyYe5DO/3dY8vTp9QCp/6v8kNi+hRsymV46LsQM3TGH6dgAOJGn3f2vz/rnisJtzIOCZ8eHVlK5xoYJjg==" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.21.0/components/prism-bash.min.js" integrity="sha512-undB7JF5cHZkHEnrvpIR6vpLG/3YR5LeDjvGKMDvr5WD7U6Xrkhymp8asv7ausEICQorcKjq3BIjz0vI5yJCnA==" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.21.0/plugins/command-line/prism-command-line.min.js" integrity="sha512-a58hJgsPeGLYUdOI9kcWlg/W4Zvv75x3YGimp5kTChivqrvRkniF8U2M30VmWttYaI9vcZ3xS2b2wLypQs3afg==" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.21.0/components/prism-json.min.js" integrity="sha512-IC7rV8RslChgByOdUFC6ePqOGn+OwJhnKC3S5AezM8DAiOdGhJMwgsIvBChsa2yuxxoPbH2+W/kjNUM1cc+jUQ==" crossorigin="anonymous"></script>           
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.21.0/components/prism-json.min.js" integrity="sha512-IC7rV8RslChgByOdUFC6ePqOGn+OwJhnKC3S5AezM8DAiOdGhJMwgsIvBChsa2yuxxoPbH2+W/kjNUM1cc+jUQ==" crossorigin="anonymous"></script>  
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.21.0/components/prism-xml-doc.min.js" integrity="sha512-7UKWE2rgzbPpx1Yu/BPH7bHTHiIjheYAtyVQUxAjyBjet5956cCO8cFZbMpMkwHt6U7Eg1PciDXNTsGt4Dz33g==" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.21.0/components/prism-typescript.min.js" integrity="sha512-5KnWNKu6jz8OE4nIBndz3PZ4O3RGqcPNcsyEFZkx3F5N8liSwc3bCe4qPOa/a3+e4CxVl0izHMXeZ0Z4yk7LTA==" crossorigin="anonymous"></script>         
             </Helmet>
             <Layout>
                 <div className="container">
