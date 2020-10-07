@@ -1244,9 +1244,14 @@ a.back-to-home:hover {
 
 /* Prism CSS override*/
 code[class*=language-], pre[class*=language-] {
-    background-color: #000 !important;
     font-size: 1rem !important;
     text-align: left !important;
     white-space: pre !important;
     word-spacing: normal !important;
 }
+
+/* Sidebar buttons CSS */
+.scroll-btn:hover {
+    opacity: 0.8;
+    cursor: pointer;
+  }

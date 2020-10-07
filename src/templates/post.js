@@ -6,7 +6,8 @@ import { DiscussionEmbed } from "disqus-react";
 import { Layout } from "../components/common";
 import { MetaData } from "../components/common/meta";
 import { readingTime as readingTimeHelper } from "@tryghost/helpers";
-import PostPreview from "../components/common/PostPreview"
+import PostPreview from "../components/common/PostPreview";
+import Scroll from '../components/common/Scroll';
 
 import Favicon from "../../static/favicon.ico";
 
@@ -38,7 +39,7 @@ const Post = ({title, tags, data, location, pageContext }) => {
                 ></link>
                 <style type="text/css">{`${post.codeinjection_styles}`}</style>
 {/* Prism.js - Code Syntax Highlighter*/}
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.21.0/themes/prism.min.css" />
+{/* <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.21.0/themes/prism.min.css" />
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.21.0/plugins/command-line/prism-command-line.min.css" integrity="sha512-4Y1uID1tEWeqDdbb7452znwjRVwseCy9kK9BNA7Sv4PlMroQzYRznkoWTfRURSADM/SbfZSbv/iW5sNpzSbsYg==" crossorigin="anonymous" />
 <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.21.0/prism.min.js" integrity="sha512-WkVkkoB31AoI9DAk6SEEEyacH9etQXKUov4JRRuM1Y681VsTq7jYgrRw06cbP6Io7kPsKx+tLFpH/HXZSZ2YEQ==" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.21.0/components/prism-gherkin.min.js" integrity="sha512-3ULk9Uw/3pVWV2LDqnuQmohR4/SG/aYjcox+XqGQzjde592yy2DPV71Jm/Jc8KgLhvz1Pj4ZH+q4Ma+jq6yFrA==" crossorigin="anonymous"></script>
@@ -53,6 +54,7 @@ const Post = ({title, tags, data, location, pageContext }) => {
 <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.21.0/components/prism-json.min.js" integrity="sha512-IC7rV8RslChgByOdUFC6ePqOGn+OwJhnKC3S5AezM8DAiOdGhJMwgsIvBChsa2yuxxoPbH2+W/kjNUM1cc+jUQ==" crossorigin="anonymous"></script>  
 <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.21.0/components/prism-xml-doc.min.js" integrity="sha512-7UKWE2rgzbPpx1Yu/BPH7bHTHiIjheYAtyVQUxAjyBjet5956cCO8cFZbMpMkwHt6U7Eg1PciDXNTsGt4Dz33g==" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.21.0/components/prism-typescript.min.js" integrity="sha512-5KnWNKu6jz8OE4nIBndz3PZ4O3RGqcPNcsyEFZkx3F5N8liSwc3bCe4qPOa/a3+e4CxVl0izHMXeZ0Z4yk7LTA==" crossorigin="anonymous"></script>   
+           */}
             </Helmet>
             <Layout>
                 <div className="container">
@@ -109,8 +111,31 @@ const Post = ({title, tags, data, location, pageContext }) => {
                                 className="content-body load-external-scripts"
                                 dangerouslySetInnerHTML={{ __html: post.html }}
                             />
+                        {/* Google in Articale ads */}
+                        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<ins class="adsbygoogle"
+     style={{ display:"block", textAlign:"center"}}
+     data-ad-layout="in-article"
+     data-ad-format="fluid"
+     data-ad-client="ca-pub-1533259080190708"
+     data-ad-slot="8244664482"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
                         </section>
                     </article>
+                    {/* Google Display ads */}
+                    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<ins class="adsbygoogle"
+     style={{display:"block"}}
+     data-ad-client="ca-pub-1533259080190708"
+     data-ad-slot="3164654238"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+                    <Scroll showBelow={250} />
                     <div>
                          <PostPreview prev={prev} next={next} />
                     </div>
