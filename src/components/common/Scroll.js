@@ -2,13 +2,13 @@ import React, { useState, useEffect } from 'react'
 const spanStyles = {
   color: "black",
   bottom: "4vh",
-  right: "10%",
+  right: "4%",
   zIndex: "2",
   position: "fixed"
 };
 
 const buttonStyle={
-  margin:"4px"
+  margin:"5px"
 }
 
 const Scroll = ({
