@@ -1244,6 +1244,7 @@ a.back-to-home:hover {
 
 /* Prism CSS override*/
 code[class*=language-], pre[class*=language-] {
+    background-color: #000 !important;
     font-size: 1rem !important;
     text-align: left !important;
     white-space: pre !important;
