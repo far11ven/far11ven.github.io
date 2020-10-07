@@ -44,10 +44,12 @@ const Scroll = ({
       <div>
           {show &&
           <span style={spanStyles}>
-             <h2 onClick={scrollToTop} style={buttonStyle}  className="scroll-btn" aria-label="to top" component="span">
+             <h2 onClick={scrollToTop} style={buttonStyle}  className="scroll-btn" aria-label="to top" component="span" title="Scroll to top">
+                {/*adding font-awesome icon */}
                 <i class="fas fa-arrow-alt-circle-up"></i>
               </h2>
-              <h2 onClick={scrollToBottom} style={buttonStyle} className="scroll-btn" aria-label="to bottom" component="span">
+              <h2 onClick={scrollToBottom} style={buttonStyle} className="scroll-btn" aria-label="to bottom" component="span" title="Scroll to bottom">
+                   {/*adding font-awesome icon */}
                 <i class="fas fa-arrow-alt-circle-down"></i>
               </h2>  
             </span>

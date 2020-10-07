@@ -33,6 +33,7 @@ const DefaultLayout = ({ data, children, bodyClass, isHome }) => {
                 ></link>
                  {/* adding google fonts */}
                 <link href="https://fonts.googleapis.com/css?family=Caveat" rel="stylesheet"/>
+                {/* adding font-awesome icons */}
                 <script src="https://kit.fontawesome.com/02130b3d51.js" crossorigin="anonymous"></script>
                 <style type="text/css">{`${site.codeinjection_styles}`}</style>
                 <body className={bodyClass} />
