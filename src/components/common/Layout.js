@@ -31,8 +31,6 @@ const DefaultLayout = ({ data, children, bodyClass, isHome }) => {
                     type="image/x-icon"
                     href={Favicon}
                 ></link>
-                 {/* adding google fonts */}
-                <link href="https://fonts.googleapis.com/css?family=Caveat" rel="stylesheet"/>
                 {/* adding font-awesome icons */}
                 <link href="https://www.kushalbhalaik.xyz/assets/font-awesome-5.15.1/css/all.css" rel="stylesheet" />
                 <style type="text/css">{`${site.codeinjection_styles}`}</style>
