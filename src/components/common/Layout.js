@@ -34,7 +34,7 @@ const DefaultLayout = ({ data, children, bodyClass, isHome }) => {
                  {/* adding google fonts */}
                 <link href="https://fonts.googleapis.com/css?family=Caveat" rel="stylesheet"/>
                 {/* adding font-awesome icons */}
-                <script src="https://kit.fontawesome.com/02130b3d51.js" crossorigin="anonymous"></script>
+                <link href="https://www.kushalbhalaik.xyz/assets/font-awesome-5.15.1/css/all.css" rel="stylesheet" />
                 <style type="text/css">{`${site.codeinjection_styles}`}</style>
                 <body className={bodyClass} />
             </Helmet>
