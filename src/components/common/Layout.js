@@ -1,9 +1,11 @@
 import React from "react";
 import PropTypes from "prop-types";
 import Helmet from "react-helmet";
-import { Link, StaticQuery, graphql } from "gatsby";
+import {StaticQuery, graphql } from "gatsby";
 
 import Favicon from "../../../static/favicon.ico";
+
+import Navbar from "../common/Navbar";
 
 import { Navigation } from ".";
 import config from "../../utils/siteConfig";
@@ -38,75 +40,16 @@ const DefaultLayout = ({ data, children, bodyClass, isHome }) => {
                 <body className={bodyClass} />
             </Helmet>
 
-            <div className="viewport">
-                <div className="viewport-top">
-                    {/* The main header section on top of the screen */}
-                    <nav className="navbar navbar-expand-lg navbar-light fixed-top">
-                        <a className="navbar-brand" href="/">
-                            <span className="navbar-title">kushalbhalaik.xyz</span>
-                        </a>
-                        <button
-                            className="navbar-toggler collapsed position-relative"
-                            type="button"
-                            data-toggle="collapse"
-                            data-target="#navbarSupportedContent"
-                            aria-controls="navbarSupportedContent"
-                            aria-expanded="false"
-                            aria-label="Toggle navigation"
-                        >
-                            <span> </span>
-                            <span> </span>
-                            <span> </span>
-                        </button>
-                        <div
-                            className="collapse navbar-collapse"
-                            id="navbarSupportedContent"
-                        >
-                            <ul className="navbar-nav mr-auto">
-                                <li className="nav-item header active-nav-item">
-                                    <a className="nav-link" href="/">
-                                        {" "}
-                                        blog{" "}
-                                    </a>
-                                </li>
-                                <li className="nav-item header">
-                                    <a
-                                        className="nav-link"
-                                        href="https://kushalbhalaik.xyz/my-work.html"
-                                    >
-                                        {" "}
-                                        my work{" "}
-                                    </a>
-                                </li>
-                                <li className="nav-item header">
-                                    <a
-                                        className="nav-link"
-                                        href="https://kushalbhalaik.xyz/contact.html"
-                                    >
-                                        {" "}
-                                        contact me{" "}
-                                    </a>
-                                </li>
-                                <li className="nav-item header">
-                                    <a
-                                        className="nav-link"
-                                        href="https://kushalbhalaik.xyz/"
-                                    >
-                                        {" "}
-                                        about me{" "}
-                                    </a>
-                                </li>
-                            </ul>
-                        </div>
-                    </nav>
-
+            <div className="viewport dark-th">
+                <div className="viewport-top dark-th">
+                    <Navbar></Navbar>
                     <main className="site-main">
                         {/* All the main content gets inserted here, index.js, post.js */}
                         {children}
                     </main>
                 </div>
 
-                <div className="viewport-bottom">
+                <div className="viewport-bottom dark-th">
                     {/* The footer at the very bottom of the screen */}
                     {/* <footer className="site-foot">
                         <div className="site-foot-nav container">
@@ -130,7 +73,7 @@ const DefaultLayout = ({ data, children, bodyClass, isHome }) => {
                             </div>
                         </div>
                     </footer> */}
-                    <footer className="footer mt-auto p-3">
+                    <footer className="footer mt-auto p-3 dark-th">
                         <span className="text-muted">
                             © 2019-20 Kushal Bhalaik
                         </span>

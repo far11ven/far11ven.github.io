@@ -10,10 +10,10 @@ const PostPreview = ({prev, next,props}) => {
     }
 
     return (
-      <div className="container">
-        <section className="post-preview-navigation">
+      <div className="container dark-th">
+      <section className="post-preview-navigation dark-th">
         <nav style={{ display: 'flex', justifyContent: 'space-between' }}>
-        <div className="col-md-6 col-xs-6">
+        <div className="col-md-6 col-xs-6 dark-th">
         {prev && <Link to={prev.slug} rel="prev">
         <span aria-hidden="true">
         <BackArrow></BackArrow>
@@ -36,7 +36,7 @@ const PostPreview = ({prev, next,props}) => {
         }
         </div>
     
-        <div className="col-md-6 col-xs-6">
+        <div className="col-md-6 col-xs-6 dark-th">
           {next && <Link to={next.slug} rel="next">
           <span aria-hidden="true"  > 
           Next Post {" "}<ForwardArrow ></ForwardArrow>

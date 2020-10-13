@@ -42,6 +42,7 @@ module.exports = {
         /**
          *  Content Plugins
          */
+        'gatsby-plugin-dark-mode',
         {
             resolve: `gatsby-source-filesystem`,
             options: {
@@ -49,13 +50,21 @@ module.exports = {
                 name: `pages`
             }
         },
-        // Setup for optimised images.
+        // Setup for optimised images
         // See https://www.gatsbyjs.org/packages/gatsby-image/
         {
             resolve: `gatsby-source-filesystem`,
             options: {
                 path: path.join(__dirname, `src`, `images`),
                 name: `images`
+            }
+        },
+        // Setup for /static/fonts
+        {
+            resolve: "gatsby-source-filesystem",
+            options: {
+                path: path.join(__dirname, `src`, `fonts`),
+                 name: "fonts"
             }
         },
         `gatsby-plugin-sharp`,

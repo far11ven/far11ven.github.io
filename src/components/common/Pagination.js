@@ -6,7 +6,7 @@ const Pagination = ({ pageContext }) => {
     const { previousPagePath, nextPagePath, humanPageNumber, numberOfPages } = pageContext
 
     return (
-        <nav className="pagination" role="navigation">
+        <nav className="pagination dark-th" role="navigation">
             <div>
                 {previousPagePath && (
 

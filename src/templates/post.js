@@ -59,8 +59,8 @@ const Post = ({title, tags, data, location, pageContext }) => {
 <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.21.0/components/prism-typescript.min.js" integrity="sha512-5KnWNKu6jz8OE4nIBndz3PZ4O3RGqcPNcsyEFZkx3F5N8liSwc3bCe4qPOa/a3+e4CxVl0izHMXeZ0Z4yk7LTA==" crossorigin="anonymous"></script>  
             </Helmet>
             <Layout>
-                <div className="container">
-                    <article className="content">
+                <div className="container dark-th">
+                    <article className="content" >
                         {post.feature_image ? (
                             <figure className="post-feature-image">
                                 <img
@@ -83,7 +83,7 @@ const Post = ({title, tags, data, location, pageContext }) => {
                         </div>
                        </strong>
                        <br></br>
-                        <section className="post-full-content">
+                        <section className="post-full-content dark-th">
                             <h1 className="content-title">{post.title}</h1>
                             <p className="text-muted">
                                 {post.created_at_pretty}
@@ -115,7 +115,7 @@ const Post = ({title, tags, data, location, pageContext }) => {
                             />
                         {/* Google in Articale ads */}
                         <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-<ins class="adsbygoogle"
+<ins className="adsbygoogle"
      style={{ display:"block", textAlign:"center"}}
      data-ad-layout="in-article"
      data-ad-format="fluid"
@@ -128,7 +128,7 @@ const Post = ({title, tags, data, location, pageContext }) => {
                     </article>
                     {/* Google Display ads */}
                     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-<ins class="adsbygoogle"
+<ins className="adsbygoogle"
      style={{display:"block"}}
      data-ad-client="ca-pub-1533259080190708"
      data-ad-slot="3164654238"
