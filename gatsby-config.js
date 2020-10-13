@@ -60,13 +60,7 @@ module.exports = {
             }
         },
         // Setup for /static/fonts
-        {
-            resolve: "gatsby-source-filesystem",
-            options: {
-                path: path.join(__dirname, `src`, `fonts`),
-                 name: "fonts"
-            }
-        },
+        
         `gatsby-plugin-sharp`,
         `gatsby-transformer-sharp`,
         {
