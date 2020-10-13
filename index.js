@@ -7,7 +7,7 @@ let isFormValidated = false;
 msgData["sender"] = "kushalbhalaik.xyz";
 
 window.onload = function () {
-  changeTheme(localStorage.getItem("darkMode")); //select theme
+  changeTheme(localStorage.getItem("theme")); //select theme
 
   if (window.location.pathname === "/") {
     fetch("config.json")
@@ -97,20 +97,25 @@ function sendMsg() {
 }
 
 function themeSelection() {
-  let isSelected = document.getElementById("theme-toggle").checked;
-
-  localStorage.setItem("darkMode", !isSelected);
-  changeTheme(localStorage.getItem("darkMode"));
+  if(localStorage.getItem("theme") === 'dark'){
+    localStorage.setItem("theme",'light');
+    changeTheme(localStorage.getItem("theme"));
+  }
+  else {
+    localStorage.setItem("theme",'dark');
+    changeTheme(localStorage.getItem("theme"));
+  }
 }
 
-function changeTheme(userPref) {
+function changeTheme(theme) {
   var deviceWidth = Math.max(window.screen.width, window.innerWidth);
   console.log("deviceWidth :", deviceWidth);
   $(document).ready(function () {
-    if (userPref === "true") {
+    if (theme === "dark") {
       $(".dark-th").css("color", "#ffffff");
       $(".dark-wh").css("color", "#ffffff");
-      $("#theme-toggle").prop("checked", true);
+      $("#sw_light").hide();
+      $("#sw_dark").show();
       if (deviceWidth < 575) {
         $("body").css("background-color", "#12253c");
         $("html").css("background-color", "#12253c");
@@ -123,7 +128,8 @@ function changeTheme(userPref) {
     } else {
       $(".dark-th").css("color", "rgba(0,0,0,.5)");
       $(".dark-wh").css("color", "#000000");
-      $("#theme-toggle").prop("checked", false);
+      $("#sw_dark").hide();
+      $("#sw_light").show();
       if (deviceWidth < 575) {
         $("body").css("background-color", "#ecf0f3");
         $("html").css("background-color", "#ecf0f3");
