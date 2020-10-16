@@ -5,6 +5,14 @@ import Dark from "../../images/svg/dark.inline.svg";
 
 class DarkModeSwitch extends React.Component {
 
+  componentDidMount() {
+    var currentTheme = window.localStorage.getItem("theme");
+    console.log('componentDidMount.theme',currentTheme);
+
+    document.getElementsByTagName("body")[0].classList.add(currentTheme);
+     }
+
+
   render() {
     return (
       <ThemeToggler> 

@@ -1274,7 +1274,7 @@ span.navbar-text svg:hover{
 body.dark {
     -webkit-font-smoothing: antialiased;
    
-    --bg: rgb(18, 37, 60);
+    --color-bg: rgb(18, 37, 60);
     --textNormal: rgba(255, 255, 255, 0.88);
     --textTitle: white;
     --textLink: yellow;
@@ -1292,7 +1292,7 @@ figcaption,
 span.navbar-text,
 span.navbar-text svg,
 .dark-th{
-    background-color: var(--bg) !important;
+    background-color: var(--color-bg) !important;
     color: var(--textNormal) !important;
     fill: #007bff;
 }

@@ -33,13 +33,13 @@ class Navbar extends React.Component {
                       blog{" "}
                   </a>
               </li>
-              <li className="nav-item header">
+              <li className="nav-item header" >
                   <a
                       className="nav-link"
                       href="https://kushalbhalaik.xyz/my-work.html"
                   >
                       {" "}
-                      my work{" "}
+                      my work{" "} 
                   </a>
               </li>
               <li className="nav-item header">
