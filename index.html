@@ -39,7 +39,6 @@
    <script>
       // Registering our Service worker
       if ("serviceWorker" in navigator) {
-
          navigator.serviceWorker
             .register('serviceWorker.js', { scope: './' })
             .then(res => console.log("service worker registered"))
@@ -51,7 +50,9 @@
 
 <body>
    <nav class="navbar navbar-expand-lg navbar-light fixed-top">
-      <a class="navbar-brand dark-wh" href="/"><span class="navbar-title">>kushalbhalaik.xyz</span></a>
+      <a class="navbar-brand" href="/">
+         <span class="navbar-title">>kushalbhalaik.xyz</span>
+       </a>
       <button class="navbar-toggler collapsed position-relative" type="button" data-toggle="collapse"
          data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
          aria-label="Toggle navigation">
@@ -102,10 +103,10 @@
                      </section>
                   </section>
                   <section class="spotlight dark-th">
-                     <a href="https://www.linkedin.com/in/kushalbhalaik" target="_blank"
+                     <a class="ripple" href="https://www.linkedin.com/in/kushalbhalaik" target="_blank"
                         rel="nofollow noopener noreferrer" class="btn btn-info" role="button"
                         style="background-color:#007bff; border-color:#007bff; margin-bottom:4px;"><span>View my portfolio  <i class="fab fa-linkedin-in"></i></span></a>
-                     <a href="/assets/Resume_Kushal Bhalaik.pdf" target="_blank"
+                     <a class="ripple" href="/assets/Resume_Kushal Bhalaik.pdf" target="_blank"
                         rel="nofollow noopener noreferrer" class="btn btn-info" role="button"
                         style="background-color:#13bb13; border-color:#13bb13; margin-bottom:4px;"><span>View my Résumé  <i class="far fa-file-pdf"></i></i></span></a>
                     
