@@ -21,7 +21,7 @@ const PostPreview = ({prev, next,props}) => {
         </span>
         
         <div className="row post-item no-gutters border rounded overflow-hidden flex-md-row mb-4 ml-1 mr-1 h-md-250 position-relative">
-          <div className="col p-4 d-flex flex-column position-static">
+          <div className="col p-2 d-flex flex-column position-static">
           <h6 className="post-preview-title mb-1">{prev.title}</h6>
           <div className="post-card-footer-right">
             <div className="mb-2 text-muted"><p className="lead"><span className="badge badge-secondary">{prev.readingTime}</span></p>
@@ -42,7 +42,7 @@ const PostPreview = ({prev, next,props}) => {
           Next Post {" "}<ForwardArrow ></ForwardArrow>
          </span>
           <div className="row post-item no-gutters border rounded overflow-hidden flex-md-row mb-4 ml-1 mr-1 h-md-250 position-relative">
-            <div className="col p-4 d-flex flex-column position-static">
+            <div className="col p-2 d-flex flex-column position-static">
               <h6 className="post-preview-title mb-1">{next.title}</h6>
               <div className="post-card-footer-right">
                 <div className="mb-2 text-muted"><p className="lead"><span className="badge badge-secondary">{next.readingTime}</span></p>

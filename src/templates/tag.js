@@ -22,8 +22,8 @@ const Tag = ({ data, location, pageContext }) => {
                 <div className="container">
                     <header className="tag-header">
                         <h2>
-                            <span>#</span>
-                            {tag.name.toLowerCase()}
+                            <br/>
+                            <span>#{tag.name.toLowerCase()}</span>        
                         </h2>
                         {tag.description ? <p>{tag.description}</p> : null}
                     </header>

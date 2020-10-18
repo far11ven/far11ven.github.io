@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react'
-import DarkModeSwitch from '../common/DarkModeSwitch'
+
 const spanStyles = {
   color: "black",
   bottom: "4vh",
@@ -7,10 +7,6 @@ const spanStyles = {
   zIndex: "2",
   position: "fixed"
 };
-
-const buttonStyle={
-  margin:"5px"
-}
 
 const Scroll = ({
   showBelow,
@@ -45,14 +41,14 @@ const Scroll = ({
       <div className="dark-th">
           {show &&
           <span style={spanStyles}>
-             <h2 onClick={scrollToTop} style={buttonStyle}  className="scroll-btn" aria-label="to top" component="span" title="Scroll to top">
+             <div aria-label="to top" component="span" title="Scroll to top">
                 {/*adding font-awesome icon */}
-                <i className="fas fa-arrow-alt-circle-up"></i>
-              </h2>
-              <h2 onClick={scrollToBottom} style={buttonStyle} className="scroll-btn" aria-label="to bottom" component="span" title="Scroll to bottom">
+                <i onClick={scrollToTop} id="scroll-btn" className="fas fa-arrow-alt-circle-up"></i>
+              </div>
+              <div  aria-label="to bottom" component="span" title="Scroll to bottom">
                    {/*adding font-awesome icon */}
-                <i className="fas fa-arrow-alt-circle-down"></i>
-              </h2>  
+                <i onClick={scrollToBottom} id="scroll-btn" className="fas fa-arrow-alt-circle-down"></i>
+              </div>  
             </span>
           }
       </div>

@@ -24,8 +24,8 @@ export function onRenderBody({
         />        
     ]);
 
-    setPreBodyComponents([]);
-
     setBodyAttributes([
     ]);
+
+    setPostBodyComponents([]);
 }

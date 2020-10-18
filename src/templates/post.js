@@ -73,9 +73,9 @@ const Post = ({title, tags, data, location, pageContext }) => {
                           <div className="post-card-tags">
                             {post.tags.map((item, i) => (
                               <span key={i}>
-                                <a href={"/tag/" + item.name.toLowerCase()}>
+                                <a href={"/tag/" + item.slug.toLowerCase()}>
                                     {"#"}
-                                    {item.name.toLowerCase()}
+                                    {item.slug.toLowerCase()}
                                     {"  "}
                                 </a>
                               </span>
