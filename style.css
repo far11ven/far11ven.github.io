@@ -157,6 +157,10 @@ span.navbar-text svg{
     fill: #007bff;
 }
 
+span.navbar-text img:hover{
+  cursor: pointer;
+}
+
 .active-nav-item {
   color: #007bff !important;
 }
