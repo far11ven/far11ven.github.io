@@ -6,12 +6,10 @@ import Dark from "../../images/svg/dark.inline.svg";
 class DarkModeSwitch extends React.Component {
 
   componentDidMount() {
-    var currentTheme = window.localStorage.getItem("theme");
-    console.log('componentDidMount.theme',currentTheme);
-
+    var currentTheme = window.localStorage.getItem("theme")
     document.getElementsByTagName("body")[0].classList.add(currentTheme);
-     }
 
+  }
 
   render() {
     return (
@@ -19,7 +17,6 @@ class DarkModeSwitch extends React.Component {
         {({ theme, toggleTheme }) => {
           
         const nextTheme = theme === 'dark' ? 'light' : 'dark';
-        console.log('render.theme',theme);
 
         return (
             <Fragment>
@@ -35,7 +32,6 @@ class DarkModeSwitch extends React.Component {
                   }}
                 />
                 }
-                {console.log('last theme',theme)}
             </Fragment>
           )
         }}

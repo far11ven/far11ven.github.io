@@ -37,7 +37,7 @@ const DefaultLayout = ({ data, children, bodyClass, isHome }) => {
                 {/* adding font-awesome icons */}
                 <link href="https://www.kushalbhalaik.xyz/assets/font-awesome-5.15.1/css/all.css" rel="stylesheet" />
                 <style type="text/css">{`${site.codeinjection_styles}`}</style>
-                <body className={bodyClass} />
+                {/* <body className={bodyClass} /> //interfers with DarkModeSwitch*/}
             </Helmet>
 
             <div className="viewport dark-th">

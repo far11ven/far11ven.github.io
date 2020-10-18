@@ -1,6 +1,6 @@
-import React from "react";
+import React , { useEffect }from "react";
 import PropTypes from "prop-types";
-import { Link, graphql } from "gatsby";
+import { graphql } from "gatsby";
 import Helmet from "react-helmet";
 import { DiscussionEmbed } from "disqus-react";
 import { Layout } from "../components/common";
@@ -27,9 +27,16 @@ const Post = ({title, tags, data, location, pageContext }) => {
         config: { identifier: post.slug, title },
     };
 
+    useEffect(() => {
+        //append .line-numbers to <pre>
+        Array.prototype.slice.call(document.getElementsByTagName("pre")).forEach((elem) => {
+                elem.classList.add("line-numbers");
+        })
+                       
+    });
+
     return (
         <>
-            {/* <div>{console.log(data)}</div> */}
             <MetaData data={data} location={location} type="article" />
             <Helmet>
                 <link
@@ -38,10 +45,11 @@ const Post = ({title, tags, data, location, pageContext }) => {
                     href={Favicon}
                 ></link>
                 <style type="text/css">{`${post.codeinjection_styles}`}</style>
-{/* Prism.js - Code Syntax Highlighter*/}
+                {/* Prism.js - Code Syntax Highlighter*/}
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.21.0/themes/prism.min.css" />
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.21.0/plugins/command-line/prism-command-line.min.css" integrity="sha512-4Y1uID1tEWeqDdbb7452znwjRVwseCy9kK9BNA7Sv4PlMroQzYRznkoWTfRURSADM/SbfZSbv/iW5sNpzSbsYg==" crossorigin="anonymous" />
 <link rel="stylesheet preload" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.21.0/themes/prism-okaidia.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.22.0/plugins/line-numbers/prism-line-numbers.min.css" integrity="sha512-cbQXwDFK7lj2Fqfkuxbo5iD1dSbLlJGXGpfTDqbggqjHJeyzx88I3rfwjS38WJag/ihH7lzuGlGHpDBymLirZQ==" crossorigin="anonymous" />
 <noscript>{`<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.21.0/themes/prism-okaidia.min.css">`}</noscript>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.21.0/plugins/line-numbers/prism-line-numbers.min.css" integrity="sha512-cbQXwDFK7lj2Fqfkuxbo5iD1dSbLlJGXGpfTDqbggqjHJeyzx88I3rfwjS38WJag/ihH7lzuGlGHpDBymLirZQ==" crossorigin="anonymous" />
 <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.21.0/prism.min.js" integrity="sha512-WkVkkoB31AoI9DAk6SEEEyacH9etQXKUov4JRRuM1Y681VsTq7jYgrRw06cbP6Io7kPsKx+tLFpH/HXZSZ2YEQ==" crossorigin="anonymous"></script>
@@ -57,6 +65,7 @@ const Post = ({title, tags, data, location, pageContext }) => {
 <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.21.0/components/prism-json.min.js" integrity="sha512-IC7rV8RslChgByOdUFC6ePqOGn+OwJhnKC3S5AezM8DAiOdGhJMwgsIvBChsa2yuxxoPbH2+W/kjNUM1cc+jUQ==" crossorigin="anonymous"></script>  
 <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.21.0/components/prism-xml-doc.min.js" integrity="sha512-7UKWE2rgzbPpx1Yu/BPH7bHTHiIjheYAtyVQUxAjyBjet5956cCO8cFZbMpMkwHt6U7Eg1PciDXNTsGt4Dz33g==" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.21.0/components/prism-typescript.min.js" integrity="sha512-5KnWNKu6jz8OE4nIBndz3PZ4O3RGqcPNcsyEFZkx3F5N8liSwc3bCe4qPOa/a3+e4CxVl0izHMXeZ0Z4yk7LTA==" crossorigin="anonymous"></script>  
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.22.0/plugins/line-numbers/prism-line-numbers.min.js" integrity="sha512-1oLZvExT5RaW4q2GgvRPf+XzVVGmsKirfZBRN7aifdOpvZ1L9idEncfMFlfHiQNGBA+Sev+alscSAT/xQ0rwXA==" crossorigin="anonymous"></script>
             </Helmet>
             <Layout>
                 <div className="container dark-th">

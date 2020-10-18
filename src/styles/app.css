@@ -1252,14 +1252,6 @@ a.back-to-home:hover {
     fill: #007bff;
 }
 
-/* Prism CSS override*/
-code[class*=language-], pre[class*=language-] {
-    font-size: 1rem !important;
-    text-align: left !important;
-    white-space: pre !important;
-    word-spacing: normal !important;
-}
-
 /* Sidebar buttons CSS */
 #scroll-btn{
     margin:5px;
@@ -1272,10 +1264,7 @@ code[class*=language-], pre[class*=language-] {
     cursor: pointer;
 }
 
-  /* Dark Mode CSS */
-span.navbar-text svg:hover{
-    cursor: pointer;
-}
+/* Dark Mode CSS */
 
 body.dark {
     -webkit-font-smoothing: antialiased;
@@ -1285,6 +1274,10 @@ body.dark {
     --textTitle: white;
     --textLink: yellow;
     --hr: hsla(0, 0%, 100%, 0.2);
+}
+
+span.navbar-text svg:hover{
+    cursor: pointer;
 }
 
 h1,
@@ -1306,4 +1299,12 @@ span.navbar-text svg,
 i{
     color: var(--textNormal) !important;
     fill: #007bff;
+}
+
+/* Prism CSS override*/
+code[class*=language-], pre[class*=language-] {
+    font-size: 1rem !important;
+    text-align: left !important;
+    white-space: pre !important;
+    word-spacing: normal !important;
 }
