@@ -98,16 +98,6 @@ li a {
   padding: 10px;
 }
 
-#msg-container {
-  padding: 2rem;
-}
-
-p#success-message {
-  border: 1px solid #007bff;
-  padding: 5rem;
-  margin-top: 1rem;
-}
-
 .bio {
   padding: 28px;
 }
@@ -115,6 +105,7 @@ p#success-message {
 .summary {
   margin-top: 1rem;
 }
+
 nav li {
   margin: 0;
   padding-left: 0;
@@ -124,6 +115,10 @@ nav li {
   font-family: "Caveat"; 
   font-style: normal;
   font-size: 2rem;
+}
+
+#sw_light,#sw_dark{
+  display:none;
 }
 
 a.navbar-brand {
