@@ -48,6 +48,7 @@ body {
 nav {
   background-color: #fcfcfc;
 }
+
 ul {
   list-style-type: none;
   margin: 0;
@@ -62,7 +63,7 @@ li {
 li a {
   display: block;
   color: #007bff;
-  padding: 1rem;
+  padding-right: 1.5rem;
   text-decoration: none;
 }
 
@@ -221,9 +222,13 @@ a.back-to-home:hover {
   color: royalblue;
 }
 
+.social-link{
+  transform: scale(0.9);
+}
+
 .social-link:hover {
   transform: scale(1);
-  animation: heart-beat 1s ease-in-out infinite alternate;
+  /* animation: heart-beat 1s ease-in-out infinite alternate; */
 }
 
 /** Navbar Toggler Icon **/
