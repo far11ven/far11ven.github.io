@@ -117,10 +117,12 @@ const Post = ({title, tags, data, location, pageContext }) => {
      (adsbygoogle = window.adsbygoogle || []).push({});
 </script> 
                             </div>
+                    <section>
                             <section
                                 className="content-body load-external-scripts"
                                 dangerouslySetInnerHTML={{ __html: post.html }}
                             >
+                                </section>
                              <div>
 {/* Google in Article ads */}
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
