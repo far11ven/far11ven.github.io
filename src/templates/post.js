@@ -45,7 +45,7 @@ const Post = ({title, tags, data, location, pageContext }) => {
                     href={Favicon}
                 ></link>
                 <style type="text/css">{`${post.codeinjection_styles}`}</style>
-                {/* Prism.js - Code Syntax Highlighter*/}
+{/* Prism.js - Code Syntax Highlighter*/}
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.21.0/themes/prism.min.css" />
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.21.0/plugins/command-line/prism-command-line.min.css" integrity="sha512-4Y1uID1tEWeqDdbb7452znwjRVwseCy9kK9BNA7Sv4PlMroQzYRznkoWTfRURSADM/SbfZSbv/iW5sNpzSbsYg==" crossorigin="anonymous" />
 <link rel="stylesheet preload" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.21.0/themes/prism-okaidia.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'" />
@@ -66,6 +66,8 @@ const Post = ({title, tags, data, location, pageContext }) => {
 <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.21.0/components/prism-xml-doc.min.js" integrity="sha512-7UKWE2rgzbPpx1Yu/BPH7bHTHiIjheYAtyVQUxAjyBjet5956cCO8cFZbMpMkwHt6U7Eg1PciDXNTsGt4Dz33g==" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.21.0/components/prism-typescript.min.js" integrity="sha512-5KnWNKu6jz8OE4nIBndz3PZ4O3RGqcPNcsyEFZkx3F5N8liSwc3bCe4qPOa/a3+e4CxVl0izHMXeZ0Z4yk7LTA==" crossorigin="anonymous"></script>  
 <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.22.0/plugins/line-numbers/prism-line-numbers.min.js" integrity="sha512-1oLZvExT5RaW4q2GgvRPf+XzVVGmsKirfZBRN7aifdOpvZ1L9idEncfMFlfHiQNGBA+Sev+alscSAT/xQ0rwXA==" crossorigin="anonymous"></script>
+{/* amp-ads*/}
+<script async custom-element="amp-ad" src="https://cdn.ampproject.org/v0/amp-ad-0.1.js"></script>
             </Helmet>
             <Layout>
                 <div className="container dark-th">
@@ -95,37 +97,35 @@ const Post = ({title, tags, data, location, pageContext }) => {
                         <section className="post-full-content dark-th">
                             <h1 className="content-title">{post.title}</h1>
                             <p className="text-muted">
-                                {post.created_at_pretty}
+                                {post.published_at_pretty}
                             </p>
                             <p className="lead">
                                 <span className="badge badge-secondary">
                                     {readingTime}
                                 </span>
                             </p>
-                            {/* Google in Articale ads */}
-                            <ins
-                                className="adsbygoogle"
-                                // style={{
-                                //     display: "block",
-                                //     textAlign: "center",
-                                // }}
-                                data-ad-layout="in-article"
-                                data-ad-format="fluid"
-                                data-ad-client="ca-pub-1533259080190708"
-                                data-ad-slot="8244664482"
-                            ></ins>
-                            <script>
-                                (adsbygoogle = window.adsbygoogle || []).push({}
-                                );
-                            </script>
+                            <div>
+{/* Google in-feed ads (Text-Only) */}
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<ins class="adsbygoogle"
+     style={{display:"block"}}
+     data-ad-format="fluid"
+     data-ad-layout-key="-gw-3+1f-3d+2z"
+     data-ad-client="ca-pub-1533259080190708"
+     data-ad-slot="7571223905"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script> 
+                            </div>
                             <section
                                 className="content-body load-external-scripts"
                                 dangerouslySetInnerHTML={{ __html: post.html }}
-                            />
-                        {/* Google in Articale ads */}
-                        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+                            >
+                             <div>
+{/* Google in Article ads */}
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
 <ins className="adsbygoogle"
-     style={{ display:"block", textAlign:"center"}}
+     style={{display:"block", textAlign:"center"}}
      data-ad-layout="in-article"
      data-ad-format="fluid"
      data-ad-client="ca-pub-1533259080190708"
@@ -133,19 +133,11 @@ const Post = ({title, tags, data, location, pageContext }) => {
 <script>
      (adsbygoogle = window.adsbygoogle || []).push({});
 </script>
+                            </div>
+                           </section>
                         </section>
                     </article>
-                    {/* Google Display ads */}
-                    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-<ins className="adsbygoogle"
-     style={{display:"block"}}
-     data-ad-client="ca-pub-1533259080190708"
-     data-ad-slot="3164654238"
-     data-ad-format="auto"
-     data-full-width-responsive="true"></ins>
-<script>
-     (adsbygoogle = window.adsbygoogle || []).push({});
-</script>
+             
                     <Scroll showBelow={250} />
                     <div>
                          <PostPreview prev={prev} next={next} />

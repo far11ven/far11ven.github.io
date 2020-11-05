@@ -23,7 +23,7 @@ const Tag = ({ data, location, pageContext }) => {
                     <header className="tag-header">
                         <h2>
                             <br/>
-                            <span>#{tag.name.toLowerCase()}</span>        
+                            <span>#{tag.slug.toLowerCase()}</span>        
                         </h2>
                         {tag.description ? <p>{tag.description}</p> : null}
                     </header>

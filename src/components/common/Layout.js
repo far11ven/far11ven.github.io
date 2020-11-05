@@ -44,6 +44,19 @@ const DefaultLayout = ({ data, children, bodyClass, isHome }) => {
                 <div className="viewport-top dark-th">
                     <Navbar></Navbar>
                     <main className="site-main">
+                    <div>
+                                {/* Google in-feed ads (Text-Only) */}
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<ins class="adsbygoogle"
+    style={{display:"block", textAlign:"center"}}
+     data-ad-format="fluid"
+     data-ad-layout-key="-gw-3+1f-3d+2z"
+     data-ad-client="ca-pub-1533259080190708"
+     data-ad-slot="7571223905"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>         </div>
+   
                         {/* All the main content gets inserted here, index.js, post.js */}
                         {children}
                     </main>
