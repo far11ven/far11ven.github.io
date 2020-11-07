@@ -1,4 +1,4 @@
-const cacheName = "kushalbhalaik.xyz";
+const cacheName = "apps.kushalbhalaik.xyz";
 
 // Cache all the files to make a PWA
 self.addEventListener("install", (e) => {
