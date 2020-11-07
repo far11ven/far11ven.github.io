@@ -36,7 +36,7 @@ class Navbar extends React.Component {
               <li className="nav-item header" >
                   <a
                       className="nav-link"
-                      href="https://kushalbhalaik.xyz/my-work.html"
+                      href="https://apps.kushalbhalaik.xyz/"
                   >
                       {" "}
                       my work{" "} 
