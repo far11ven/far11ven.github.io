@@ -44,6 +44,7 @@ const DefaultLayout = ({ data, children, bodyClass, isHome }) => {
                 <div className="viewport-top dark-th">
                     <Navbar></Navbar>
                     <main className="site-main">
+                        <br></br>
                     <div>
                                 {/* Google in-feed ads (Text-Only) */}
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
