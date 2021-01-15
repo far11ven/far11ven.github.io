@@ -11,9 +11,8 @@
  */
 
 import "bootstrap/dist/css/bootstrap.min.css";
-import "jquery/dist/jquery.min.js";
-import "popper.js/dist/popper.min";
 import "bootstrap/dist/js/bootstrap.min.js";
+import "@popperjs/core/dist/umd/popper.min.js";
 
 const trustAllScripts = () => {
     const scriptNodes = document.querySelectorAll(

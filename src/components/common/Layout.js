@@ -70,7 +70,7 @@ const DefaultLayout = ({ data, children, bodyClass, isHome }) => {
                     <div>
                                 {/* Google in-feed ads (Text-Only) */}
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-<ins class="adsbygoogle"
+<ins className="adsbygoogle"
     style={{display:"block", textAlign:"center"}}
      data-ad-format="fluid"
      data-ad-layout-key="-gw-3+1f-3d+2z"
