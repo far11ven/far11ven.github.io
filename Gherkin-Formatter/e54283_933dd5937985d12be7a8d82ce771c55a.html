@@ -1,0 +1,97 @@
+
+<!-- saved from url=(0014)about:internet -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><link rel="stylesheet" href="./application.css" type="text/css"> 
+<script src="./gherkin.min.js.download"></script>
+   	<script src="./codemirror.min.js.download"></script>
+   	<script src="./gherkin.js.download" charset="UTF-8"></script>
+   	<script src="./lint.min.js.download"></script>
+   	<script src="./simplescrollbars.js.download"></script>
+   	<script src="./gherkin-lint.js.download"></script>
+   	<link rel="stylesheet" href="./codemirror.min.css" type="text/css">
+   	<link rel="stylesheet" href="./lint.min.css" type="text/css">
+      <script src="./application.js.download"></script>
+</head><body data-new-gr-c-s-check-loaded="14.993.0" data-gr-ext-installed=""><div style="background-color: #F2F7FF;"> 
+<div class="form-group" style="background-color: #F2F7FF;">
+  <label for="select" style="font-size: 18px;">Select theme:<label> 
+  <select class="form-control" style="margin-left: 5px;" onchange="selectTheme()" id="select">
+    <option>default</option>
+    <option>3024-day</option>
+    <option>3024-night</option>
+    <option>abcdef</option>
+    <option>ambiance</option>
+    <option>base16-dark</option>
+    <option>base16-light</option>
+    <option>bespin</option>
+    <option>blackboard</option>
+    <option>cobalt</option>
+    <option>colorforth</option>
+    <option>dracula</option>
+    <option>duotone-dark</option>
+    <option>duotone-light</option>
+    <option>eclipse</option>
+    <option>elegant</option>
+    <option selected="selected">erlang-dark</option>
+    <option>gruvbox-dark</option>
+    <option>hopscotch</option>
+    <option>icecoder</option>
+    <option>idea</option>
+    <option>isotope</option>
+    <option>lesser-dark</option>
+    <option>liquibyte</option>
+    <option>lucario</option>
+    <option>material</option>
+    <option>mbo</option>
+    <option>mdn-like</option>
+    <option>midnight</option>
+    <option>monokai</option>
+    <option>neat</option>
+    <option>neo</option>
+    <option>night</option>
+    <option>nord</option>
+    <option>oceanic-next</option>
+    <option>panda-syntax</option>
+    <option>paraiso-dark</option>
+    <option>paraiso-light</option>
+    <option>pastel-on-dark</option>
+    <option>railscasts</option>
+    <option>rubyblue</option>
+    <option>seti</option>
+    <option>shadowfox</option>
+    <option>solarized dark</option>
+    <option>solarized light</option>
+    <option>the-matrix</option>
+    <option>tomorrow-night-bright</option>
+    <option>tomorrow-night-eighties</option>
+    <option>ttcn</option>
+    <option>twilight</option>
+    <option>vibrant-ink</option>
+    <option>xq-dark</option>
+    <option>xq-light</option>
+    <option>yeti</option>
+    <option>yonce</option>
+    <option>zenburn</option>
+</select>
+</label></label></div>
+
+ 
+ <textarea id="textarea" cols="80" rows="60" style="display: none;">@smoke @atm
+Feature: Account Holder withdraws cash
+  
+Scenario Outline: Account has sufficient funds
+  Given the account balance is $&lt;balance&gt;
+    And the card is valid
+    And the machine contains enough money  
+   When the Account Holder requests $&lt;requested&gt;
+   Then the ATM should dispense $&lt;dispenced&gt;
+    And the account balance should be $&lt;new-balance&gt;
+    And the card should be returned
+  Examples: 
+    | balance | requested | dispensed | new-balance | 
+    | 100     | 20        | 20        | 80          | 
+  
+  </textarea><div class="CodeMirror CodeMirror-simplescroll cm-s-erlang-dark" style="height: auto;"><div style="overflow: hidden; position: relative; width: 3px; height: 0px; top: 4px; left: 50px;"><textarea autocorrect="off" autocapitalize="off" spellcheck="false" style="position: absolute; padding: 0px; width: 1000px; height: 1em; outline: none;" tabindex="0"></textarea></div><div class="CodeMirror-simplescroll-horizontal" cm-not-content="true" style="display: none;"><div></div></div><div class="CodeMirror-simplescroll-vertical" cm-not-content="true" style="display: none; bottom: 0px;"><div style="height: 235.732px; top: 0px;"></div></div><div class="CodeMirror-scrollbar-filler" cm-not-content="true"></div><div class="CodeMirror-gutter-filler" cm-not-content="true"></div><div class="CodeMirror-scroll" tabindex="-1"><div class="CodeMirror-sizer" style="margin-left: 46px; margin-bottom: -22px; border-right-width: 8px; min-height: 384px; min-width: 452.333px; padding-right: 0px; padding-bottom: 0px;"><div style="position: relative; top: 0px;"><div class="CodeMirror-lines"><div style="position: relative; outline: none;"><div class="CodeMirror-measure">AخA<div class="CodeMirror-linenumber CodeMirror-gutter-elt"><div>16</div></div></div><div class="CodeMirror-measure"></div><div style="position: relative; z-index: 1;"></div><div class="CodeMirror-cursors"><div class="CodeMirror-cursor" style="left: 4px; top: 0px; height: 23.4667px;">&nbsp;</div></div><div class="CodeMirror-code" style=""><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -46px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 16px; width: 20px;">1</div></div><pre class=" CodeMirror-line "><span style="padding-right: 0.1px;"><span class="cm-tag">@smoke @atm</span></span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -46px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 16px; width: 20px;">2</div></div><pre class=" CodeMirror-line "><span style="padding-right: 0.1px;"><span class="cm-keyword">Feature:</span> Account Holder withdraws cash</span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -46px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 16px; width: 20px;">3</div></div><pre class=" CodeMirror-line "><span style="padding-right: 0.1px;">  </span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -46px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 16px; width: 20px;">4</div></div><pre class=" CodeMirror-line "><span style="padding-right: 0.1px;"><span class="cm-keyword">Scenario Outline:</span> Account has sufficient funds</span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -46px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 16px; width: 20px;">5</div></div><pre class=" CodeMirror-line "><span style="padding-right: 0.1px;"><span class="cm-keyword">  Given </span>the account balance is $<span class="cm-variable">&lt;balance&gt;</span></span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -46px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 16px; width: 20px;">6</div></div><pre class=" CodeMirror-line "><span style="padding-right: 0.1px;"><span class="cm-keyword">    And </span>the card is valid</span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -46px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 16px; width: 20px;">7</div></div><pre class=" CodeMirror-line "><span style="padding-right: 0.1px;"><span class="cm-keyword">    And </span>the machine contains enough money  </span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -46px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 16px; width: 20px;">8</div></div><pre class=" CodeMirror-line "><span style="padding-right: 0.1px;"><span class="cm-keyword">   When </span>the Account Holder requests $<span class="cm-variable">&lt;requested&gt;</span></span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -46px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 16px; width: 20px;">9</div></div><pre class=" CodeMirror-line "><span style="padding-right: 0.1px;"><span class="cm-keyword">   Then </span>the ATM should dispense $<span class="cm-variable">&lt;dispenced&gt;</span></span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -46px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 16px; width: 20px;">10</div></div><pre class=" CodeMirror-line "><span style="padding-right: 0.1px;"><span class="cm-keyword">    And </span>the account balance should be $<span class="cm-variable">&lt;new-balance&gt;</span></span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -46px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 16px; width: 20px;">11</div></div><pre class=" CodeMirror-line "><span style="padding-right: 0.1px;"><span class="cm-keyword">    And </span>the card should be returned</span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -46px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 16px; width: 20px;">12</div></div><pre class=" CodeMirror-line "><span style="padding-right: 0.1px;"><span class="cm-keyword">  Examples:</span> </span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -46px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 16px; width: 20px;">13</div></div><pre class=" CodeMirror-line "><span style="padding-right: 0.1px;"><span class="cm-bracket">    |</span><span class="cm-header"> balance </span><span class="cm-bracket">| </span><span class="cm-header">requested </span><span class="cm-bracket">| </span><span class="cm-header">dispensed </span><span class="cm-bracket">| </span><span class="cm-header">new-balance </span><span class="cm-bracket">| </span></span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -46px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 16px; width: 20px;">14</div></div><pre class=" CodeMirror-line "><span style="padding-right: 0.1px;"><span class="cm-bracket">    | </span><span class="cm-string">100     </span><span class="cm-bracket">| </span><span class="cm-string">20        </span><span class="cm-bracket">| </span><span class="cm-string">20        </span><span class="cm-bracket">| </span><span class="cm-string">80          </span><span class="cm-bracket">| </span></span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -46px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 16px; width: 20px;">15</div></div><pre class=" CodeMirror-line "><span style="padding-right: 0.1px;">  </span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -46px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 16px; width: 20px;">16</div></div><pre class=" CodeMirror-line "><span style="padding-right: 0.1px;">  </span></pre></div></div></div></div></div></div><div style="position: absolute; height: 8px; width: 1px; top: 384px;"></div><div class="CodeMirror-gutters" style="height: 562px; left: -3.8147e-06px;"><div class="CodeMirror-gutter CodeMirror-lint-markers"></div><div class="CodeMirror-gutter CodeMirror-foldgutter"></div><div class="CodeMirror-gutter CodeMirror-linenumbers" style="width: 29px;"></div></div></div></div>	
+</div>
+<script>
+ var _0x5ae3=["\x74\x65\x78\x74\x61\x72\x65\x61","\x67\x65\x74\x45\x6C\x65\x6D\x65\x6E\x74\x42\x79\x49\x64","\x75\x6E\x64\x65\x66\x69\x6E\x65\x64","\x67\x68\x65\x72\x6B\x69\x6E","\x43\x6F\x64\x65\x4D\x69\x72\x72\x6F\x72\x2D\x6C\x69\x6E\x74\x2D\x6D\x61\x72\x6B\x65\x72\x73","\x43\x6F\x64\x65\x4D\x69\x72\x72\x6F\x72\x2D\x66\x6F\x6C\x64\x67\x75\x74\x74\x65\x72","\x73\x69\x6D\x70\x6C\x65","\x66\x72\x6F\x6D\x54\x65\x78\x74\x41\x72\x65\x61","\x73\x65\x6C\x65\x63\x74","\x74\x65\x78\x74\x43\x6F\x6E\x74\x65\x6E\x74","\x73\x65\x6C\x65\x63\x74\x65\x64\x49\x6E\x64\x65\x78","\x6F\x70\x74\x69\x6F\x6E\x73","\x74\x68\x65\x6D\x65","\x73\x65\x74\x4F\x70\x74\x69\x6F\x6E","\x68\x61\x73\x68","\x23","\x73\x6C\x69\x63\x65","\x73\x65\x61\x72\x63\x68","\x6C\x6F\x63\x61\x74\x69\x6F\x6E","\x76\x61\x6C\x75\x65","\x61\x75\x74\x6F","\x73\x65\x74\x53\x69\x7A\x65","\x68\x61\x73\x68\x63\x68\x61\x6E\x67\x65","\x6F\x6E","\x20\x20\x20\x20","\x67\x65\x74\x56\x61\x6C\x75\x65","\x0A","\x73\x70\x6C\x69\x74","\x46\x65\x61\x74\x75\x72\x65\x3A","\x69\x6E\x64\x65\x78\x4F\x66","\x42\x61\x63\x6B\x67\x72\x6F\x75\x6E\x64\x3A","\x53\x63\x65\x6E\x61\x72\x69\x6F\x3A","\x53\x63\x65\x6E\x61\x72\x69\x6F\x20\x4F\x75\x74\x6C\x69\x6E\x65\x3A","\x6C\x65\x6E\x67\x74\x68","","\x72\x65\x70\x6C\x61\x63\x65","\x6D\x61\x74\x63\x68","\x0A\x0A","\x20\x20\x24\x31\x24\x32","\x20\x20\x20\x24\x31\x24\x32","\x20\x20\x20\x20\x24\x31\x24\x32","\x20\x20\x24\x31\x3A\x20\x24\x32","\x24\x31\x3A\x20\x24\x32","\x24\x31","\x7C","\x70\x75\x73\x68","\x69\x6E\x6E\x65\x72\x48\x54\x4D\x4C","\x65\x72\x72\x6F\x72\x73","\x50\x72\x6F\x62\x6C\x65\x6D\x20\x77\x69\x74\x68\x20\x74\x61\x62\x6C\x65\x20\x73\x74\x61\x72\x74\x69\x6E\x67\x20\x61\x74\x20\x6C\x69\x6E\x65\x20","\x2E\x20\x43\x68\x65\x63\x6B\x20\x74\x68\x65\x20\x6E\x75\x6D\x62\x65\x72\x20\x6F\x66\x20\x63\x6F\x6C\x75\x6D\x6E\x73\x2E","\x62\x61\x63\x6B\x67\x72\x6F\x75\x6E\x64","\x73\x79\x6E\x74\x61\x78\x48\x69\x67\x68\x6C\x69\x67\x68\x74","\x61\x64\x64\x4C\x69\x6E\x65\x43\x6C\x61\x73\x73","\x61\x70\x70\x6C\x79","\x6D\x61\x78","\x7C\x20","\x20","\x20\x7C\x20","\x73\x65\x74\x56\x61\x6C\x75\x65","\x63\x6C\x65\x61\x72\x48\x69\x73\x74\x6F\x72\x79","\x61\x64\x64\x4B\x65\x79\x4D\x61\x70","\x63\x68\x61\x6E\x67\x65","\x64\x69\x73\x70\x61\x74\x63\x68\x45\x76\x65\x6E\x74"];var element=document[_0x5ae3[1]](_0x5ae3[0]);if( typeof (element)!= _0x5ae3[2]&& element!= null){var editor=CodeMirror[_0x5ae3[7]](element,{mode:_0x5ae3[3],lineNumbers:true,gutters:[_0x5ae3[4],_0x5ae3[5]],lint:true,foldGutter:true,scrollbarStyle:_0x5ae3[6]});var input=document[_0x5ae3[1]](_0x5ae3[8]);function selectTheme(){var _0x7e17x5=input[_0x5ae3[11]][input[_0x5ae3[10]]][_0x5ae3[9]];editor[_0x5ae3[13]](_0x5ae3[12],_0x7e17x5);location[_0x5ae3[14]]= _0x5ae3[15]+ _0x7e17x5}var choice=(location[_0x5ae3[14]]&& location[_0x5ae3[14]][_0x5ae3[16]](1))|| (document[_0x5ae3[18]][_0x5ae3[17]]&& decodeURIComponent(document[_0x5ae3[18]][_0x5ae3[17]][_0x5ae3[16]](1)));if(choice){input[_0x5ae3[19]]= choice;editor[_0x5ae3[13]](_0x5ae3[12],choice);editor[_0x5ae3[21]](null,_0x5ae3[20])};CodeMirror[_0x5ae3[23]](window,_0x5ae3[22],function(){var _0x7e17x5=location[_0x5ae3[14]][_0x5ae3[16]](1);if(_0x7e17x5){input[_0x5ae3[19]]= _0x7e17x5;selectTheme();editor[_0x5ae3[21]](null,_0x5ae3[20])}});function formatFeature(editor){var _0x7e17x8=false;var _0x7e17x9=_0x5ae3[24];var _0x7e17xa=false;var _0x7e17xb=0;var _0x7e17xc=0;var _0x7e17xd=editor[_0x5ae3[25]]();var _0x7e17xe=_0x7e17xd[_0x5ae3[27]](_0x5ae3[26]);if(_0x7e17xd[_0x5ae3[29]](_0x5ae3[28])==  -1){return};if(_0x7e17xd[_0x5ae3[29]](_0x5ae3[30])==  -1){var _0x7e17xf=false;if(_0x7e17xd[_0x5ae3[29]](_0x5ae3[31])==  -1&& _0x7e17xd[_0x5ae3[29]](_0x5ae3[32])==  -1){var _0x7e17x10=false}else {var _0x7e17x10=true}}else {var _0x7e17xf=true};for(var _0x7e17x11=0;_0x7e17x11< _0x7e17xe[_0x5ae3[33]];_0x7e17x11++){if(!_0x7e17xf&&  !_0x7e17x10){_0x7e17xe[_0x7e17x11]= _0x7e17xe[_0x7e17x11][_0x5ae3[35]](/^[ \t]+/gm,_0x5ae3[34])};if(_0x7e17xf){if(_0x7e17xe[_0x7e17x11][_0x5ae3[36]](/^[ \t]+Background.*/mg)){break};_0x7e17xe[_0x7e17x11]= _0x7e17xe[_0x7e17x11][_0x5ae3[35]](/^[ \t]+/gm,_0x5ae3[34])};if(_0x7e17x10){if(_0x7e17xe[_0x7e17x11][_0x5ae3[36]](/^[ \t]+Scenario.*/mg)){break};_0x7e17xe[_0x7e17x11]= _0x7e17xe[_0x7e17x11][_0x5ae3[35]](/^[ \t]+/gm,_0x5ae3[34])}};_0x7e17xd= _0x5ae3[34];for(var _0x7e17x12=0;_0x7e17x12< _0x7e17xe[_0x5ae3[33]];_0x7e17x12++){_0x7e17xd+= _0x7e17xe[_0x7e17x12]+ _0x5ae3[26]};_0x7e17xd= _0x7e17xd[_0x5ae3[35]](/^[ \t]+/gm,_0x5ae3[34]);_0x7e17xd= _0x7e17xd[_0x5ae3[35]](/\n{3,}/g,_0x5ae3[37]);_0x7e17xd= _0x7e17xd[_0x5ae3[35]](/^(Given)(.*)/gm,_0x5ae3[38]);_0x7e17xd= _0x7e17xd[_0x5ae3[35]](/^(When|Then)(.*)/gm,_0x5ae3[39]);_0x7e17xd= _0x7e17xd[_0x5ae3[35]](/^(But|And)(.*)/gm,_0x5ae3[40]);_0x7e17xd= _0x7e17xd[_0x5ae3[35]](/^(Examples)[ \t]*:[ \t]*(.*)/gm,_0x5ae3[41]);_0x7e17xd= _0x7e17xd[_0x5ae3[35]](/^(Background)[ \t]*:[ \t]*(.*)/gm,_0x5ae3[42]);_0x7e17xd+= _0x5ae3[26];var _0x7e17xe=_0x7e17xd[_0x5ae3[27]](_0x5ae3[26]);for(var _0x7e17x11=0;_0x7e17x11< _0x7e17xe[_0x5ae3[33]];_0x7e17x11++){var _0x7e17x13=_0x7e17xe[_0x7e17x11];if(_0x7e17x13[_0x5ae3[36]](/\|.*\|/g)!= null&& _0x7e17x13[_0x5ae3[36]](/^(\s+)?#/)== null){if(!_0x7e17xa){var _0x7e17x14=_0x7e17x11;var _0x7e17x15= new Array();_0x7e17xa= true};var _0x7e17x16= new Array();_0x7e17x13= _0x7e17x13[_0x5ae3[35]](/^[ \t]*\|\s*/gm,_0x5ae3[34]);_0x7e17x13= _0x7e17x13[_0x5ae3[35]](/[ \t]*\|\s*$/gm,_0x5ae3[34]);_0x7e17x13= _0x7e17x13[_0x5ae3[35]](/[ \t]*(\|)[ \t]*/g,_0x5ae3[43]);var _0x7e17x17=_0x7e17x13[_0x5ae3[27]](_0x5ae3[44]);for(var _0x7e17x18=0;_0x7e17x18< _0x7e17x17[_0x5ae3[33]];_0x7e17x18++){_0x7e17x16[_0x5ae3[45]](_0x7e17x17[_0x7e17x18])};_0x7e17x15[_0x5ae3[45]](_0x7e17x16)}else {if(_0x7e17xa){_0x7e17xa= false;var _0x7e17x19= new Array();_0x7e17xb= _0x7e17x15[0][_0x5ae3[33]];_0x7e17xc= _0x7e17x15[_0x5ae3[33]];for(var _0x7e17x1a=0;_0x7e17x1a< _0x7e17xb;_0x7e17x1a++){var _0x7e17x1b= new Array();for(var _0x7e17x1c=0;_0x7e17x1c< _0x7e17xc;_0x7e17x1c++){if(_0x7e17x15[_0x7e17x1c][_0x5ae3[33]]!= _0x7e17xb&&  !_0x7e17x8){_0x7e17x8= true;document[_0x5ae3[1]](_0x5ae3[47])[_0x5ae3[46]]= _0x5ae3[48]+ (_0x7e17x14+ 1)+ _0x5ae3[49];inputCodeMirror[_0x5ae3[52]](_0x7e17x14,_0x5ae3[50],_0x5ae3[51]);return};_0x7e17x1b[_0x5ae3[45]](_0x7e17x15[_0x7e17x1c][_0x7e17x1a][_0x5ae3[33]])};_0x7e17x19[_0x5ae3[45]](Math[_0x5ae3[54]][_0x5ae3[53]](Math,_0x7e17x1b))};for(var _0x7e17x1c=0;_0x7e17x1c< _0x7e17xc;_0x7e17x1c++){var _0x7e17x1d=_0x7e17x9+ _0x5ae3[55];for(var _0x7e17x1a=0;_0x7e17x1a< _0x7e17xb;_0x7e17x1a++){var _0x7e17x1e=_0x7e17x15[_0x7e17x1c][_0x7e17x1a];var _0x7e17x1f=_0x7e17x1e[_0x5ae3[33]];var _0x7e17x20=_0x7e17x19[_0x7e17x1a]- (_0x7e17x1f);var _0x7e17x21=_0x5ae3[34];_0x7e17x1d+= _0x7e17x1e;for(var _0x7e17x22=0;_0x7e17x22< _0x7e17x20;_0x7e17x22++){_0x7e17x21+= _0x5ae3[56]};_0x7e17x1d+= _0x7e17x21+ _0x5ae3[57]};_0x7e17xe[_0x7e17x14+ _0x7e17x1c]= _0x7e17x1d}}}};_0x7e17xd= _0x5ae3[34];for(var _0x7e17x12=0;_0x7e17x12< _0x7e17xe[_0x5ae3[33]];_0x7e17x12++){_0x7e17xd+= _0x7e17xe[_0x7e17x12]+ _0x5ae3[26]};_0x7e17xd= _0x7e17xd;editor[_0x5ae3[58]](_0x7e17xd)}editor[_0x5ae3[60]]({'\x43\x74\x72\x6C\x2D\x41\x6C\x74\x2D\x4C':function(_0x7e17x23){formatFeature(_0x7e17x23)},'\x43\x74\x72\x6C\x2D\x41\x6C\x74\x2D\x53\x70\x61\x63\x65':function(_0x7e17x23){_0x7e17x23[_0x5ae3[58]](_0x5ae3[34]);_0x7e17x23[_0x5ae3[59]]()}})};(function(){var _0x7e17x24=document[_0x5ae3[1]](_0x5ae3[8]);_0x7e17x24[_0x5ae3[10]]= 16;_0x7e17x24[_0x5ae3[62]]( new Event(_0x5ae3[61]))})()
+</script>
+</body></html>
