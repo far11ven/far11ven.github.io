@@ -20,8 +20,7 @@ window.onload = function () {
       });
   } else {
     document.querySelector('a[href="' + window.location.pathname + '"]')
-      .closest("li") //variations ("li,ul")
-      .classList.add("active-nav-item");
+      .parentNode.classList.add("active-nav-item");
   }
 };
 
